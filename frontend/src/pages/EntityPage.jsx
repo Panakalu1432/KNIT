@@ -47,29 +47,29 @@ export default function EntityPage(){
   onSubmit={submit}
   className="bg-white p-6 rounded-xl shadow mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
 >
-  {/* Name */}
+ 
   <div className="flex flex-col">
     <label className="text-gray-700 font-medium mb-1">Name</label>
     <input
       value={form.name}
       onChange={e => setForm({ ...form, name: e.target.value })}
       placeholder="Enter name"
-      className="p-2 border border-gray-400 rounded placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="p-2 border text-black border-gray-400 rounded placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
     />
   </div>
 
-  {/* Description */}
+ 
   <div className="flex flex-col">
-    <label className="text-gray-700 font-medium mb-1">Description</label>
+    <label className="text-gray-700  font-medium mb-1">Description</label>
     <input
       value={form.description}
       onChange={e => setForm({ ...form, description: e.target.value })}
       placeholder="Enter description"
-      className="p-2 border border-gray-400 rounded placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="p-2 border text-black border-gray-400 rounded placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
     />
   </div>
 
-  {/* Price */}
+ 
   <div className="flex flex-col">
     <label className="text-gray-700 font-medium mb-1">Price</label>
     <input
@@ -77,11 +77,11 @@ export default function EntityPage(){
       value={form.price}
       onChange={e => setForm({ ...form, price: Number(e.target.value) })}
       placeholder="Enter price"
-      className="p-2 border border-gray-400 rounded text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      className="p-2 border text-black border-gray-400 rounded text-gray-500 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
     />
   </div>
 
-  {/* Button */}
+
   <div className="flex items-end">
     <button
       type="submit"
