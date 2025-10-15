@@ -6,11 +6,14 @@ const { initializeDatabase } = require('./config/db');
 const apiRoutes = require('./routes/v1/index');
 const errorHandler = require('./middleware/errorHandler');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 const ENV = process.env.NODE_ENV || 'development';
 
 const app = express(); 
- app.use(cors());  
+ app.use(cors({
+    origin: ["https://knit-1-sub6.onrender.com"], 
+    credentials: true,
+  }));  
 app.use(express.json());  
 app.use(express.urlencoded({ extended: true }));
 
@@ -19,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
     res.send(`Knit Backend API. Environment: ${ENV}.`);
 });
 
+const JWT_SECRET = "yourSuperSecretKey123"
  app.use('/api/v1', apiRoutes);
 
  app.use(errorHandler);
